@@ -323,29 +323,29 @@ for opt in results_dict:
 generate_results_table(results_dict)
 
 # %% [markdown]
-# ### The training logs across five folds and ten epochs reveal distinct performance nuances among the optimizers. All three Adam, RMSprop, and AdamW demonstrate a consistent trend of decreasing losses and increasing accuracies over time. However, differences emerge when examining the precise numbers.
+# The training logs across five folds and ten epochs reveal distinct performance nuances among the optimizers. All three Adam, RMSprop, and AdamW demonstrate a consistent trend of decreasing losses and increasing accuracies over time. However, differences emerge when examining the precise numbers.
 # 
-# ## Analyzing Adam Optimizer
-# ### For Adam, the model typically started with a training loss around 1.71–1.72 in epoch 1 and converged to approximately 1.53–1.54 by epoch 10. Training accuracies steadily improved from roughly 76–77% in the first epoch to around 92–93% in later epochs, while validation accuracies reached about 90–91%. Although Adam’s performance is solid, its convergence appears a bit gradual compared to the others.
+# ### Analyzing Adam Optimizer
+# For Adam, the model typically started with a training loss around 1.71–1.72 in epoch 1 and converged to approximately 1.53–1.54 by epoch 10. Training accuracies steadily improved from roughly 76–77% in the first epoch to around 92–93% in later epochs, while validation accuracies reached about 90–91%. Although Adam’s performance is solid, its convergence appears a bit gradual compared to the others.
 # 
-# ## Analyzing RMSprop Optimizer
-# ### RMSprop, in contrast, shows a slightly more aggressive reduction in loss and higher final accuracies. In some folds, RMSprop pushed the training accuracy as high as 96.13% by the final epoch, with training losses dipping below 1.52 and validation losses following a similar downward trend. These results suggest that RMSprop might be fine-tuning the model’s parameters more effectively, contributing to its superior overall performance in this task.
+# ### Analyzing RMSprop Optimizer
+# RMSprop, in contrast, shows a slightly more aggressive reduction in loss and higher final accuracies. In some folds, RMSprop pushed the training accuracy as high as 96.13% by the final epoch, with training losses dipping below 1.52 and validation losses following a similar downward trend. These results suggest that RMSprop might be fine-tuning the model’s parameters more effectively, contributing to its superior overall performance in this task.
 # 
-# ## Analyzing AdamW Optimizer
-# ### AdamW also exhibits competitive behavior with some noteworthy numbers. In several folds, AdamW reduced the training loss from about 1.70–1.72 at the beginning to a consistent range of 1.524–1.530 by epoch 10. For instance, in Fold 1, AdamW recorded a final training accuracy of approximately 93.82% and a validation accuracy around 91.30%. Across the folds, AdamW’s average final performance hovered near a training accuracy of 93% and validation accuracy of about 91%, with losses settling in a similar range as observed in Fold 1. While AdamW doesn’t always reach the peak performance seen with RMSprop, its steady convergence and reliable metric improvements make it a robust contender.
+# ### Analyzing AdamW Optimizer
+# AdamW also exhibits competitive behavior with some noteworthy numbers. In several folds, AdamW reduced the training loss from about 1.70–1.72 at the beginning to a consistent range of 1.524–1.530 by epoch 10. For instance, in Fold 1, AdamW recorded a final training accuracy of approximately 93.82% and a validation accuracy around 91.30%. Across the folds, AdamW’s average final performance hovered near a training accuracy of 93% and validation accuracy of about 91%, with losses settling in a similar range as observed in Fold 1. While AdamW doesn’t always reach the peak performance seen with RMSprop, its steady convergence and reliable metric improvements make it a robust contender.
 # 
-# ## Conclusion
-# ### In conclusion, RMSprop appears to outperform the others on this task by achieving the lowest losses and highest accuracies consistently. However, AdamW remains a strong alternative, delivering competitive results with stable convergence patterns and final metrics that are only marginally behind RMSprop. Depending on the specific application requirements and tolerance for variability, RMSprop might be the best choice, while AdamW also offers a dependable option for similar neural network training scenarios.
+# ### Conclusion
+# In conclusion, RMSprop appears to outperform the others on this task by achieving the lowest losses and highest accuracies consistently. However, AdamW remains a strong alternative, delivering competitive results with stable convergence patterns and final metrics that are only marginally behind RMSprop. Depending on the specific application requirements and tolerance for variability, RMSprop might be the best choice, while AdamW also offers a dependable option for similar neural network training scenarios.
 
 # %% [markdown]
-# # References
+# ### References
 # 
-# ### https://pytorch.org/vision/main/generated/torchvision.datasets.KMNIST.html
-# ### https://pytorch.org/docs/stable/generated/torch.optim.Adam.html
-# ### https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html
-# ### https://pytorch.org/docs/stable/generated/torch.optim.RMSprop.html
-# ### https://pytorch.org/docs/stable/generated/torch.nn.Module.html
-# ### https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
+# https://pytorch.org/vision/main/generated/torchvision.datasets.KMNIST.html
+# https://pytorch.org/docs/stable/generated/torch.optim.Adam.html
+# https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html
+# https://pytorch.org/docs/stable/generated/torch.optim.RMSprop.html
+# https://pytorch.org/docs/stable/generated/torch.nn.Module.html
+# https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
 
 # %%
 
